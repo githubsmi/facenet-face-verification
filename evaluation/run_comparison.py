@@ -32,7 +32,6 @@ OUTPUT_DIR = ROOT / "results" / "comparison"
 CONFIGS = {
     "resize_1_0": 1.0,
     "resize_0_5": 0.5,
-    "resize_1_5": 1.5,
 }
 
 

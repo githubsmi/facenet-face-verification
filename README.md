@@ -56,6 +56,9 @@ facenet-face-verification/
 ├── src/
 │   ├── app.py
 │   └── facenet_model.py
+├── tests/
+│   ├── test_facenet_model.py
+│   └── test_metrics.py
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -96,6 +99,18 @@ From the project root, run:
     python -m streamlit run src/app.py
 
 The application opens in your browser. Upload two images containing faces to compare their embeddings.
+
+## Run Automated Tests
+
+The project includes automated tests for the FaceNet embedding workflow and evaluation metrics. The tests use mock objects where appropriate, so they do not need to download the pretrained model or run face detection for every test.
+
+Run all tests from the project root:
+
+    python -m pytest .\tests -v
+
+The tests cover embedding output shape, RGB image conversion, face-detection errors, cosine similarity, threshold selection, metric validation, and evaluation plot generation.
+
+The current test suite contains 13 tests. All 13 passed in the development environment.
 
 ## Run the evaluation pipeline
 
@@ -198,7 +213,7 @@ Some pairs may be skipped when a face cannot be detected or processed. The repor
 
 ## Future Improvements
 
-- Add automated tests and configuration files for repeatable experiments.
+- Add more configurable experiments and improve experiment tracking for repeatable evaluation.
 - Compare different image preprocessing and threshold-selection strategies.
 - Evaluate additional datasets and report performance across relevant subgroups.
 - Add experiment tracking and more detailed error analysis.
