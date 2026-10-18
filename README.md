@@ -38,7 +38,7 @@ The project also includes an evaluation pipeline using the Labeled Faces in the 
     │   ├── run_evaluation.py
     │   ├── inspect_pair.py
     │   └── test_detection.py
-        ├── results/
+    ├── results/
     │   ├── baseline_resize1/
     │   │   ├── confusion_matrix.png
     │   │   ├── metrics.json
