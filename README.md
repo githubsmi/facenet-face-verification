@@ -30,6 +30,7 @@ The project also includes an evaluation pipeline using the Labeled Faces in the 
 
 ## Project Structure
 
+```text
 facenet-face-verification/
 ├── evaluation/
 │   ├── __init__.py
@@ -62,6 +63,7 @@ facenet-face-verification/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+```
 
 The `comparison/` directory contains the outputs from the controlled input-resize experiment. Each configuration has its own metrics, ROC curve, confusion matrix, predictions, and skipped-pair records.
 
