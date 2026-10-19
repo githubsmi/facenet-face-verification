@@ -147,6 +147,20 @@ The threshold was selected using the development subset, not the test subset. Th
 
 These are the current recorded results for this configuration. Re-run the pipeline to reproduce them in your own environment.
 
+### Evaluation Visualizations
+
+**ROC Curve**
+
+The ROC curve shows the trade-off between the true positive rate and false positive rate across decision thresholds.
+
+![Face verification ROC curve](results/roc_curve.png)
+
+**Confusion Matrix**
+
+The confusion matrix summarizes correct and incorrect predictions on the evaluated test pairs.
+
+![Face verification confusion matrix](results/confusion_matrix.png)
+
 ## Input Resize Comparison
 
 A controlled experiment was conducted to compare two LFW dataset input-resize settings while using the same pretrained InceptionResnetV1 model and MTCNN face detector.
@@ -176,6 +190,12 @@ A controlled experiment was conducted to compare two LFW dataset input-resize se
 | False Acceptance Rate (FAR) | 1.90% | 3.38% |
 | False Rejection Rate (FRR) | 1.45% | 1.24% |
 | Decision threshold | 0.4172 | 0.3810 |
+
+### ROC Comparison
+
+The following plot compares the two input-resize configurations using the same successfully processed test pairs.
+
+![ROC comparison for input resize configurations](results/comparison/comparison_roc.png)
 
 ### Interpretation
 
